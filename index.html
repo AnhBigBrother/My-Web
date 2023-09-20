@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/philosopher.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Big_Bro</title>
+</head>
+
+<body>
+    <script src="./js/main.js"></script>
+    <div id="toppp"></div>
+    <div id="header">
+        <div class="item"><a id="tat" href="#toppp" style="font-size: 1.25rem;">TIEN ANH TRAN</a></div>
+        <div class="item"><a href="#abo">About me</a></div>
+        <div class="item"><a href="#pro">Project</a></div>
+        <div class="item" style="border-right:none;margin-right:10px;"><a href="#con"
+                style="border-right: none;">Contact</a></div>
+    </div>
+    <div class="mainbody">
+        <div id="abo">
+            <h1>About me</h1>
+            <p style="text-align: justify;">Hello, my name is Tran Tien Anh, I am currently a student about to graduate
+                at Hanoi University of Science and Technology.
+                I studied mechatronics, but during my studies, I felt that this field of study was not suitable for me
+                and at the same
+                time realized that I had a passion for programming. Along with studying at school, I practiced my own
+                programming skills,
+                solved many problems on LeetCode, and also spent a lot of time learning new knowledge. My goal is to
+                become a Full Stack
+                developer and I'm working hard every day to achieve that goal!</p>
+            <br>
+            <a style="margin: 5px 3%; padding:0;" href="https://leetcode.com/TienAnh013/" target="_blank">My LeetCode profile</a>
+            <br>
+            <a style="margin: 5px 3%; padding:0;" href="https://codelearn.io/profile/6202719" target="_blank">My CodeLearn profile</a>
+            <p style="margin: 0 3%; padding:0;">(You may have to login to see!)</p>
+            <br><br>
+            <h1>Education</h1>
+            <h2 style="padding: 2%;">Hanoi University of Science and Technology</h2>
+            <p>Mechatronics engineering - Intelligent mechatronics systems</p>
+            <br><br>
+            <h1>My technical skills</h1>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>Java, JavaScript, C/C++</li>
+                <li>Data structures and algorithms</li>
+                <li>Object-Oriented programming</li>
+            </ul>
+            <br>
+            <h1>My hobby</h1>
+            <div id="hobby">
+                <div class="hobby-item" onmouseover="showDescrip1()" onmouseleave="hideDescrip1()" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')" target="_blank">
+                    <input type="image" src="./img/rocknroll.png">
+                    <div id="hobbydescr1">
+                        <p>Listen to music</p>
+                    </div>
+                </div>
+                <div class="hobby-item" onmouseover="showDescrip2()" onmouseleave="hideDescrip2()" onclick="window.open('https://lichess.org/@/t_anh_010320')" target="_blank">
+                    <input type="image" src="./img/chess.png">
+                    <div id="hobbydescr2">
+                        <p>Play Chess</p>
+                    </div>
+                </div>
+                <div class="hobby-item" onmouseover="showDescrip3()" onmouseleave="hideDescrip3()" onclick="window.open('https://www.youtube.com/watch?v=wXPlxV4fO9A')" target="_blank">
+                    <input type="image" src="./img/gym.png">
+                    <div id="hobbydescr3">
+                        <p>Lift Weight</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pro">
+            <h1>Some of my projects</h1>
+            <div class="sudoku">
+                <div class="leftSu">
+                    <h2>Let me solve you some Sudoku =))</h2>
+                    <div class="suDescr">
+                        <p>- Insert your Sudoku problem into the table below.<a href="https://sudoku.com/vi"
+                                target="_blank">(Click here to get some Sudoku problems.)</a></p>
+                        <p>- Press 'Solve this Sudoku' to solve your Sudoku.</p>
+                    </div>
+                    <div id="sudokuSource1">
+                        <p>- View my source code here: <a href="https://github.com/AnhBigBrother/Sudoku-draft" target="_blank">GitHub</a></p>
+                    </div>
+                    <div class="suBtn">
+                        <button class="Btn" onclick="sudoku()">Solve this Sudoku</button>
+                        <button class="Btn" onclick="reset()">Reset</button>
+                    </div>
+                </div>
+                <div class="sutable">
+                    <div class="box">
+                        <input type="text" class="wi" id="i11">
+                        <input type="text" class="wi" id="i12">
+                        <input type="text" class="wi" id="i13">
+                        <input type="text" class="wi" id="i14">
+                        <input type="text" class="wi" id="i15">
+                        <input type="text" class="wi" id="i16">
+                        <input type="text" class="wi" id="i17">
+                        <input type="text" class="wi" id="i18">
+                        <input type="text" class="wi" id="i19">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i21">
+                        <input type="text" class="wi" id="i22">
+                        <input type="text" class="wi" id="i23">
+                        <input type="text" class="wi" id="i24">
+                        <input type="text" class="wi" id="i25">
+                        <input type="text" class="wi" id="i26">
+                        <input type="text" class="wi" id="i27">
+                        <input type="text" class="wi" id="i28">
+                        <input type="text" class="wi" id="i29">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i31">
+                        <input type="text" class="wi" id="i32">
+                        <input type="text" class="wi" id="i33">
+                        <input type="text" class="wi" id="i34">
+                        <input type="text" class="wi" id="i35">
+                        <input type="text" class="wi" id="i36">
+                        <input type="text" class="wi" id="i37">
+                        <input type="text" class="wi" id="i38">
+                        <input type="text" class="wi" id="i39">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i41">
+                        <input type="text" class="wi" id="i42">
+                        <input type="text" class="wi" id="i43">
+                        <input type="text" class="wi" id="i44">
+                        <input type="text" class="wi" id="i45">
+                        <input type="text" class="wi" id="i46">
+                        <input type="text" class="wi" id="i47">
+                        <input type="text" class="wi" id="i48">
+                        <input type="text" class="wi" id="i49">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i51">
+                        <input type="text" class="wi" id="i52">
+                        <input type="text" class="wi" id="i53">
+                        <input type="text" class="wi" id="i54">
+                        <input type="text" class="wi" id="i55">
+                        <input type="text" class="wi" id="i56">
+                        <input type="text" class="wi" id="i57">
+                        <input type="text" class="wi" id="i58">
+                        <input type="text" class="wi" id="i59">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i61">
+                        <input type="text" class="wi" id="i62">
+                        <input type="text" class="wi" id="i63">
+                        <input type="text" class="wi" id="i64">
+                        <input type="text" class="wi" id="i65">
+                        <input type="text" class="wi" id="i66">
+                        <input type="text" class="wi" id="i67">
+                        <input type="text" class="wi" id="i68">
+                        <input type="text" class="wi" id="i69">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i71">
+                        <input type="text" class="wi" id="i72">
+                        <input type="text" class="wi" id="i73">
+                        <input type="text" class="wi" id="i74">
+                        <input type="text" class="wi" id="i75">
+                        <input type="text" class="wi" id="i76">
+                        <input type="text" class="wi" id="i77">
+                        <input type="text" class="wi" id="i78">
+                        <input type="text" class="wi" id="i79">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i81">
+                        <input type="text" class="wi" id="i82">
+                        <input type="text" class="wi" id="i83">
+                        <input type="text" class="wi" id="i84">
+                        <input type="text" class="wi" id="i85">
+                        <input type="text" class="wi" id="i86">
+                        <input type="text" class="wi" id="i87">
+                        <input type="text" class="wi" id="i88">
+                        <input type="text" class="wi" id="i89">
+                    </div>
+                    <div class="box">
+                        <input type="text" class="wi" id="i91">
+                        <input type="text" class="wi" id="i92">
+                        <input type="text" class="wi" id="i93">
+                        <input type="text" class="wi" id="i94">
+                        <input type="text" class="wi" id="i95">
+                        <input type="text" class="wi" id="i96">
+                        <input type="text" class="wi" id="i97">
+                        <input type="text" class="wi" id="i98">
+                        <input type="text" class="wi" id="i99">
+                    </div>
+                </div>
+            </div>
+            <div id="sudokuSource2">
+                <p>View my source code here: </p>
+                <a href="https://github.com/AnhBigBrother/Sudoku-draft" target="_blank"> --> GitHub</a>
+            </div>
+            <div class="otherProj">
+                <h2> Other projects </h2>
+                <p style="text-align:justify;">I studied mechatronics systems, so I used to do some projects about
+                    embedded programming.
+                    Here is some of my projects that I used to do at school.</p>
+                <div class="robotArm">
+                    <div class="proDescr">
+                        <p>- A control display of a robot-arm built with .NET framework can
+                            connect to the robot-arm by Serial-Port.</p>
+                        <p>- More about this project: <a
+                                href="https://github.com/AnhBigBrother/Robot_arm_control_display" target="_blank">
+                                GitHub
+                            </a></p>
+
+                    </div>
+                    <img src="./img/roboArm.png" alt="robotArm">
+                </div>
+                <div class="gearDetec">
+                    <div class="proDescr">
+                        <p>- An image processing program to detect gear parameters using Python and OpenCV library</p>
+                        <p>- More about this project: <a href="https://github.com/AnhBigBrother/Gear_detection" target="_blank">GitHub</a></p>
+                    </div>
+                    <img src="img/gearDetect.jpg" alt="gearDetec">
+                </div>
+            </div>
+        </div>
+        <div id="con">
+            <h1>Contact me</h1>
+            <p>Phone: 0977370162</p>
+            <p>Email: anh.bigbrother@gmail.com</p>
+            <a href="https://www.linkedin.com/in/tien-anh-tran-759465271" target="_blank">LinkedIn:
+                https://www.linkedin.com/in/tien-anh-tran-759465271</a>
+            <a href="https://github.com/AnhBigBrother" target="_blank">GitHub: https://github.com/AnhBigBrother</a>
+        </div>
+    </div>
+</body>
+
+</html>

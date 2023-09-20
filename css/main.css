@@ -1,0 +1,290 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto Mono', monospace;
+}
+:root{
+    --gray: #757575;
+    --lightGray: #a5a5a5;
+    --black: #0e141e;
+    --lblack: #1d2432;
+    --green: rgb(7, 71, 7);
+    --smooth: .3s ease-in;
+}
+body{
+    color: var(--lightGray);
+    background-color: #0e141e;
+}
+#header{
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    padding-right: 1vw;
+    color: whitesmoke;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+}
+p {
+    margin-left: 5px;
+    padding: 2%;
+}
+a{
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 2%;
+    color: var(--lightGray);
+}
+a:hover{
+    color: whitesmoke;
+    text-shadow: 0px 0px 2px whitesmoke, 0 0 8px rgb(53, 255, 2), 0 0 5px rgb(13, 124, 3);
+    transition: var(--smooth);
+}
+.item{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-right: 1px solid white ;
+    font-weight: bold;
+    height: 30px;
+    padding: 0px 20px;
+}
+#header a{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#tat{
+    text-shadow: 0px 0px 2px darkgreen, 0px 0px 3px whitesmoke;
+}
+#header a:hover{
+    text-shadow: 0px 0px 3px rgb(13, 124, 3), 0 0 8px rgb(53, 255, 2), 0 0 12px white;
+    color: white;
+    transition: var(--smooth);
+}
+.mainbody{
+    position: absolute;
+    top: 60px;
+    z-index: 0;
+    display: block;
+}
+#home, #abo, #pro, #con{
+    background-color: #1d2432;
+    border-radius: 30px;
+    margin: 5vh 20vw;
+    padding: 2%;
+}
+.mainbody h1{
+    border-bottom: 1px solid lightgreen;
+    margin-bottom: 3%;
+    padding: 2%;
+}
+.mainbody p{
+    padding: 2%;
+}
+ul, li{
+    padding: 5px;
+    margin-left: 3vw;
+}
+#hobby{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 2vh 0;
+}
+.hobby-item{
+    float: left;
+    width: 32%;
+    object-fit: cover;
+    margin: 1vh 0;
+}
+.hobby-item input{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    vertical-align: bottom; /* vertical-align: middle; or display: block; to remove the space in the bottom*/
+}
+.hobby-item:hover{
+    box-shadow: 0 0 3px rgb(13, 124, 3), 0 0 5px rgb(53, 255, 2), 0px 0px 8px white;
+}
+#hobbydescr1, #hobbydescr2, #hobbydescr3{
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    justify-content: center;
+}
+.sutable{
+    width: 500px;
+    height: 500px;
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    border-radius: 5px;
+    margin: 10px;
+    position: relative;
+    right: 0;
+    box-shadow: 0px 0px 2px whitesmoke, 0 0 3px rgb(53, 255, 2), 0 0 5px rgb(13, 124, 3);
+}
+.sudoku{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftSu{
+    display: flex;
+    flex-direction: column;
+}
+#pro h2{
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgreen;
+}
+.suBtn{
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin-left: 5px ;
+}
+.Btn{
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: var(--black);
+    color: var(--lightGray);
+    border: 2px solid var(--green);
+    margin: 5px;
+    box-shadow: 0px 0px 2px white, 0 0 3px rgb(58, 214, 19)
+}
+.Btn:hover{
+    background-color: rgb(13, 221, 13);
+    color: #0e141e;
+    cursor: pointer;
+    transition: var(--smooth);
+    box-shadow: 0px 0px 2px white, 0 0 3px rgb(53, 255, 2), 0 0 5px rgb(13, 124, 3);
+}
+.box{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    box-shadow: 0px 0px 2px whitesmoke, 0 0 3px rgb(53, 255, 2)
+}
+.wi{
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid var(--green);
+    color: var(--lightGray);
+    text-align: center;
+    background-color: var(--lblack);
+    box-shadow: 0px 0px 2px white;
+}
+.suDescr{
+    display: flexbox;
+}
+#con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.otherProj{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 2vh;
+}
+.robotArm, .gearDetec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1vw;
+    padding: 1vw;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+}
+.robotArm img, .gearDetec img{
+    object-fit: cover;
+    float: right;
+    width: 50%;
+    height: auto;
+}
+.proDescr{
+    padding-right: 10px;
+    text-align: justify;
+}
+.otherProj a{
+    overflow-wrap: break-word;
+}
+#sudokuSource1{
+    margin: 20px 0px;
+}
+#sudokuSource2{
+    display: none;
+}
+@media only screen and (max-width:1250px){
+    .wi{
+        height: 25px;
+        width: 25px;
+        font-size: 1rem;
+    }
+    #home, #abo, #pro, #con{
+        border-radius: 15px;
+        margin: 3vh 15vw;
+    }
+    .sutable{
+        height: 300px;
+        width: 300px;
+    }
+    .leftSu h2{
+        margin: 10px;
+        padding: 5px;
+    }
+    #sudokuSource1{
+        display: none;
+    }
+    #sudokuSource2{
+        display: contents;
+    }
+}
+@media only screen and (max-width:800px){
+    .sudoku{
+        flex-direction: column;
+    }
+    .suBtn{
+        justify-content: flex-start;
+    }
+    .leftSu h2{
+        margin: 20px;
+        padding: 5px;
+    }
+    .item{
+        padding: 0px 10px;
+    }
+    .robotArm, .gearDetec{
+        flex-direction: column
+    }
+    .robotArm img, .gearDetec img{
+        width: 100%;
+    }
+    .hobby-item{
+        width: 100%;
+    }
+    #hobby{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
