@@ -179,7 +179,7 @@ ul, li{
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
     align-content: space-evenly;
-    box-shadow: 0px 0px 2px whitesmoke, 0 0 3px rgb(53, 255, 2)
+    box-shadow: 0px 0px 2px whitesmoke, 0 0 3px rgb(53, 255, 2);
 }
 .wi{
     font-size: 1.5rem;
