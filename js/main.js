@@ -3,10 +3,10 @@ function sudoku() {
     let flag = true;
     function check(grid, i, j, k) {
         for (let x = 0; x < 9; x++) {
-            if (x != i && grid[x][j] == k) {
+            if (x != i && grid[x][j] === k) {
                 return false;
             }
-            if (x != j && grid[i][x] == k) {
+            if (x != j && grid[i][x] === k) {
                 return false;
             }
         }
@@ -14,7 +14,7 @@ function sudoku() {
         let y = Math.floor(j / 3) * 3;
         for (let m = x; m < x + 3; m++) {
             for (let n = y; n < y + 3; n++) {
-                if (!(m == i && n == j) && grid[m][n] == k) {
+                if (!(m === i && n === j) && grid[m][n] === k) {
                     return false;
                 }
             }
@@ -46,7 +46,7 @@ function sudoku() {
     function checkFilled(grid) {
         for (let i = 0; i < 9; i++) {
             for (let j = 0; j < 9; j++) {
-                if (grid[i][j] == "0") { return false; }
+                if (grid[i][j] === "0") { return false; }
             }
         }
         return true;
@@ -62,10 +62,10 @@ function sudoku() {
             solve(grid, p + 1);
         } else {
             for (let i = 0; i < 9; i++) {
-                if (check(grid, x, y, a[i]) == true) {
+                if (check(grid, x, y, a[i]) === true) {
                     grid[x][y] = a[i];
                     solve(grid, p + 1);
-                    if (flag == false) {
+                    if (flag === false) {
                         return;
                     }
                 }
@@ -80,7 +80,7 @@ function sudoku() {
             let index = "i" + (i + 1) + (j + 1);
             let x = document.getElementById(index);
             if (x.value != "") {
-                if (x.value == "0") {
+                if (x.value === "0") {
                     x.style = "background-color:#db1a1a;color:whitesmoke;";
                     flag = false;
                 }
@@ -96,16 +96,16 @@ function sudoku() {
         }
     }
     let checvali = checkvalid(grid);
-    if (checvali == false) {
+    if (checvali === false) {
         alert("Your Sudoku is invalid");
         return;
     }
-    if (flag == false){
+    if (flag === false){
         alert("Your Sudoku is invalid");
         return;
     }
     let checfill = checkFilled(grid);
-    if (checfill == true) {
+    if (checfill === true) {
         alert("Your Sudoku has filled, press 'Reset' to reset your Sudoku ")
         return;
     }
@@ -114,7 +114,7 @@ function sudoku() {
         for (let j = 0; j < 9; j++) {
             let index = "i" + (i + 1) + (j + 1);
             let x = document.getElementById(index);
-            if (x.value == "") {
+            if (x.value === "") {
                 x.value = grid[i][j];
                 x.style = "background-color:lightgreen;color:black;";
             }
